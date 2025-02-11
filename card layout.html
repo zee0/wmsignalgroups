@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>western mass signal groups</title>
+    <link rel="stylesheet" href="./css/card layout.css">
+  </head>
+  <body>
+    <h1>western mass signal groups</h1>
+
+<p>a list of public and <a href="#" class="has-tooltip">semi-public<span class="tooltip">semi-public groups reqire an admin to approve admittance and are denoted with &#x1f512;</span></a> signal groups centered around western massachusetts. if you'd like to have a group published here, join <a href="https://signal.group/#CjQKIEOyhxIdVU47kZ0n5Vv7sDJsrv8No-9nlZbD9jBJNhsREhDchpXLwI0EsQEXAO2mg-2i">Valley Signal Groups</a> and post.</p>
+
+<input type="text" id="search" onkeyup="searchFunction()" placeholder="search...">
+
+<ul id="cards">
+<li>
+     <a href="https://signal.group/#CjQKIFektAgCBbjqTeJK8SLMxSmcrglDeiH9Eh0PiZeC7D41EhCPelRHmsSfeHPhiJJ_33kw"><img src="./img/conway center of the universe avatar.png" alt="avatar" />
+        <h4><b>conway: center of the universe</b></h4>
+        <p>for conwegians and conwackians past, present, and future.</p> 
+    </a>
+  </li>
+  <li>
+     <a href="https://signal.group/#CjQKIIiHhhdHMsVi3S6fbqVWDIo3fJHvlmvQiUbem0nKuIm0EhC9MSGbxMBaihPuxDQTsF8G"><img src="./img/long distance backpacking avatar.png" alt="avatar" />
+        <h4><b>long distance backpacing</b></h4>
+        <p>a congregating place for folks into backpacking. you get to define what "long distance" means.</p> 
+    </a>
+  </li>
+  <li>
+     <a href="https://signal.group/#CjQKIPCqAENK_WPM-cf2GoF3tQR7SJd92xPwqL0Vtw9wLy_eEhC80qSlTKs1QwAAYq7NO4rb"><img src="./img/privacy and infosec.png" alt="avatar" />
+        <h4><b>privacy and infosec</b></h4>
+        <p>got a question about privacy and security?</p> 
+    </a>
+  </li>
+  <li>
+     <a href="https://signal.group/#CjQKIMZwYPCw9JORgH2mGhf5hTWhFMGUoRr3y6oIXnIgY3PjEhA9ojUjm-hVG8KHN4PvbxCU"><img src="./img/pvcurb avatar.png" alt="avatar" />
+        <h4><b>PVcurb - Franklin County</b></h4>
+        <p>People’s Valley Curb Alert for Franklin County MA</p> 
+    </a>
+  </li>
+  <li>
+     <a href="https://signal.group/#CjQKIFAG-p7XOFoSz0jaDSmtYVfnOVYLHdmOEVd_oF4lJWKaEhDR9i48YLKaflbXjNPnAroo"><img src="./img/pvcurb avatar.png" alt="avatar" />
+        <h4><b>PVcurb - Hampden County</b></h4>
+        <p>People’s Valley Curb Alert for Hampden County MA</p> 
+    </a>
+  </li>
+    <li>
+     <a href="https://signal.group/#CjQKIMw2ULthWlPFARm_3q7ZhBCWfe1jSmS0liL0jgU-2R64EhCpKzqFnxGMpOtO8jPawXki"><img src="./img/pvcurb avatar.png" alt="avatar" />
+        <h4><b>PVcurb - Hampshire County</b></h4>
+        <p>People’s Valley Curb Alert for Hampshire County MA</p> 
+    </a>
+  </li>
+  <li>
+     <a href="https://signal.group/#CjQKIEOyhxIdVU47kZ0n5Vv7sDJsrv8No-9nlZbD9jBJNhsREhDchpXLwI0EsQEXAO2mg-2i"><img src="./img/valley signal groups avatar.png" alt="avatar" />
+        <h4><b>Valley Signal Groups</b></h4>
+        <p>We welcome links to other valley specific Signal groups (w/ brief description and any criteria for joining)!</p> 
+    </a>
+  </li>
+  <li>
+     <a href="#"><img src="./img/avatar.png" alt="avatar" />
+        <h4><b>semi-public group</b> &#x1f512;</h4>
+        <p>semi-public group</p> 
+    </a>
+  </li>
+</ul>
+
+<script> // ref: https://www.w3schools.com/howto/howto_js_filter_lists.asp
+function searchFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('search');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("cards");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+  </body>
+</html>
+

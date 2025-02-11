@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: limegreen;
+}
+
+#search {
+  background-image: url('../img/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  border: 1px solid #ddd;
+  font: inherit;
+  padding: 12px 20px 12px 40px;
+  width: 100%;
+}
+
+#search:focus {
+  outline: 2px solid limegreen;
+}
+
+@media screen and (max-width: 540px) {
+  #cards {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 0px;
+  }
+}
+
+@media screen and (min-width: 540px) {
+  #cards {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    padding: 0px 25%;
+  }
+}
+
+#cards li {
+  background-color: #f1f1f1;
+  border: 1px solid black;
+  text-align: center;
+  
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+#cards li a {
+  text-decoration: none;
+  color: black;
+}
+
+#cards li img {
+  border-radius: 4px 4px 0 0;
+  width: 100%;
+}
+
+#cards li a h4 {
+  font-weight: bold;
+  padding: 10px;
+}
+
+#cards li a p {
+  padding: 5px;
+}
+
+#cards li:hover {
+  background-color: #fff;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.has-tooltip {
+  position: relative;
+  border-bottom: 1px dotted black;
+  color: inherit;
+  text-decoration: none;
+}
+
+.has-tooltip .tooltip {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s;
+  z-index: 1;
+}
+
+/* tooltip */
+.tooltip {
+  background-color: #555;
+  border-radius: 6px;
+  color: #fff;
+  font-size: .8em;
+  left: 50%;
+  margin-left: -75px; /* half width */
+  padding: 6px;
+  position: absolute;
+  text-align: center;
+  top: 130%;
+  width: 150px;
+  z-index: 4; 
+}
+
+/* tooltip caret */
+.tooltip:after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #555 transparent;
+}
+
+.has-tooltip:hover .tooltip, .has-tooltip:focus .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
